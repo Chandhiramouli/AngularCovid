@@ -1,0 +1,40 @@
+<mat-toolbar color="primary">
+  Coronavirus Patient Monitoring Website
+  <span class="fill"></span>
+  <a mat-raised-button color="warn" routerLink="login">Login</a>
+  <a mat-raised-button color="warn" routerLink="signup">Signup</a>
+  </mat-toolbar>
+  <router-outlet></router-outlet>
+  <div>
+    <table>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th>MobileNo</th>
+      <th>DOB</th>
+      <th>Gender</th>
+      <th>Address</th>      
+      <th>BloodPressure</th>
+      <th>BodyTemperature</th>
+    </tr>
+    <tr *ngFor='let user of users$'>
+      <td>{{user.Name}}</td>
+      <td>{{user.Email}}</td>
+      <td>{{user.MobileNo}}</td>
+      <td>{{user.DateofBirth}}</td>
+      <td>
+        {{user.Gender}}
+      </td>
+      <td>
+        {{user.Address}}
+      </td>
+      <td>
+        {{user.BloodPressure}}
+      </td>
+      <td>
+        {{user.BodyTemperature}}
+      </td>
+    </tr>    
+    
+  </table>
+  </div>
